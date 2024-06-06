@@ -426,6 +426,8 @@ function filterRadioStations(){
     checkboxes.forEach(checkbox=>{
         if(checkbox.checked == true){
         var filter = `main #radio-list ul a.${checkbox.id} {display:contents;}`;
+        } else {
+        var filter = `main #radio-list ul a.${checkbox.id} {display:none !important;}`; 
         }
         filters.push(filter);
     })
